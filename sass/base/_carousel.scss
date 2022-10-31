@@ -1,0 +1,59 @@
+.carousel {
+  position: relative;
+}
+
+.carousel__list {
+  position: relative;
+  // overflow: hidden;
+}
+
+.carousel__item {
+  display: none;
+
+  animation: 0.4s ease-in-out;
+
+
+  &--active {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  &--next {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+}
+
+
+//Animations
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes right {
+  0% { left: 100%; }
+  100% { left: 0; }
+}

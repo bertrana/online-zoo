@@ -1,0 +1,137 @@
+.pets {
+  padding-bottom: 100px;
+
+  color: #000;
+
+  background-image: url("./assets/images/pets__decor--left.png"), url("./assets/images/pets__decor--right.png");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat;
+
+  @include media-laptopsmall {
+    padding-bottom: 140px;
+
+    background-image: url("./assets/images/smalllaptop_pets__decor--left.png"), url("./assets/images/smalllaptop_pets__decor--right.png");
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+  }
+
+  @include media-tablet {
+    padding-bottom: 100px;
+
+    background-image: url("./assets/images/pets__decor--left.png"), url("./assets/images/pets__decor--right.png");
+    background-position: left bottom, right bottom;
+    background-size: auto 202px, auto 131px;
+    background-repeat: no-repeat;
+  }
+
+  @include media-mobile {
+    padding-bottom: 60px;
+
+    background-image: url("./assets/images/mobile_pets__decor--left.png"), url("./assets/images/mobile_pets__decor--right.png");
+    background-size: auto, auto;
+  }
+}
+
+.pets .container {
+  position: relative;
+}
+
+.pets__list {
+  display: flex;
+  flex-wrap: wrap;
+	justify-content: space-between;
+  gap: 20px 0;
+
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+
+  list-style: none;
+
+  @include media-laptopsmall {
+    gap: 92px 0;
+
+    margin-bottom: 75px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 62px;
+    gap: 85px 20px;
+  }
+
+  @include media-mobile {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+}
+
+.pets__controls {
+  position: absolute;
+  top: calc(50% - 92px);
+
+  width: 62px;
+  height: 62px;
+
+  color: #fff;
+  @include font-add($weight: 500, $height: 140%);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 50%;
+  background: $gradient-primary;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background: $color-hover;
+  }
+
+  &:active {
+    background: $color-active;
+  }
+
+  &--left {
+    left: -82px;
+  }
+
+  &--right {
+    right: -82px;
+  }
+
+  @include media-laptopsmall {
+    top: calc(50% - 100px);
+    
+    &--left {
+      left: calc(50% - 146px);
+    }
+
+    &--right {
+      right: calc(50% - 146px);
+    }
+  }
+
+  @include media-tablet {
+    top: calc(50% - 90px);
+
+    &--left {
+      left: calc(50% - 77px);
+    }
+
+    &--right {
+      right: calc(50% - 77px);
+    }
+  }
+
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.pets__button {
+  margin: 0 auto;
+
+  border-radius: 25px;
+}

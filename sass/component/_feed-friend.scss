@@ -1,0 +1,148 @@
+.feed-friend {
+  padding-top: 69px;
+  padding-bottom: 100px;
+
+  background: $gradient-additional;
+
+  @include media-laptopsmall {
+    padding: 30px;
+    padding-bottom: 50px;
+  }
+
+  @include media-tablet {
+    padding: 20px 0;
+  }
+
+  @include media-mobile {
+    padding: 20px 10px;
+  }
+}
+
+.feed-friend .container {
+  box-sizing: border-box;
+
+  padding-top: 41px;
+  padding-bottom: 59px;
+
+  background: $color-background;
+  border-radius: 20px;
+
+  @include media-laptopsmall {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  @include media-tablet {
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+
+  @include media-mobile {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.feed-friend h2 {
+  margin: 0;
+  margin-bottom: 30px;
+
+  color: $color-primary;
+  text-align: center;
+  @include font-add($size: 48px);
+
+  @include media-laptopsmall {
+    margin-bottom: 20px;
+  }
+
+  @include media-tablet {
+    font-size: 42px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 10px;
+
+    font-size: 24px;
+  }
+}
+
+
+.feed-friend__text-wrapper {
+  padding-left: 98px;
+
+  @include media-laptopsmall {
+    padding-left: 20px;
+  }
+
+  @include media-tablet {
+    padding: 0;
+  }
+
+  @include media-mobile {
+    text-align: center;
+
+    &>*:not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+.feed-friend__preview {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include font-add($size: 24px);
+  
+  @include media-laptopsmall {
+    margin-bottom: 20px;
+  }
+
+  @include media-tablet {
+    font-size: 22px;
+  }
+
+  @include media-mobile {
+    font-size: 18px;
+  }
+}
+
+.feed-friend__covid {
+  margin: 0;
+
+  @include font-add($weight: 500, $height: 130%);
+}
+
+.feed-friend__text {
+  margin-top: 10px;
+  margin-bottom: 59px;
+
+  @include font-add($height: 130%);
+  
+  @include media-laptopsmall {
+    margin-bottom: 40px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+}
+
+.feed-friend__donate {
+  color: $color-text;
+  text-decoration: none;
+
+  border-bottom: 1px solid $color-primary;
+}
+
+.feed-friend__donate:hover,
+.feed-friend__donate:focus {
+  color: $color-primary;
+  border: none;
+}
+
+.feed-friend__button {
+  margin: 0 auto;
+
+  border-radius: 25px;
+}

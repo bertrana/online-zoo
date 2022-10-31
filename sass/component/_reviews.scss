@@ -1,0 +1,153 @@
+.reviews {
+  padding-top: 140px;
+  padding-bottom: 180px;
+
+  background-image: url("./assets/images/testimonials__leave--right.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;;
+
+  @include media-laptopsmall {
+    padding-top: 100px;
+    padding-bottom: 140px;
+
+    background-size: 128px;
+    background-position: right bottom 22px;
+  }
+
+  @include media-tablet {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    background-size: 79px;
+    background-position: right -7px bottom;
+  }
+
+  @include media-mobile {
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+    background-size: 45px;
+    background-image: url("./assets/images/mobile_testimonials__leave--right.png");
+    background-position: right bottom -15px;
+  }
+}
+
+.reviews h2 {
+  margin: 0;
+  margin-bottom: 47px;
+
+  @include font-add($size: 36px, $height: 130%);
+  text-align: center;
+
+  @include media-laptopsmall {
+    margin-bottom: 30px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 20px;
+
+    @include font-add($size: 24px);
+  }
+}
+
+.reviews__list {  
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+
+  max-height: 391px;
+
+  @include media-tablet {
+    flex-direction: column;
+
+    max-height: none;
+
+    margin-bottom: 43px;
+  }
+
+  @include media-mobile {
+    gap: 13px;
+
+    margin-bottom: 30px;
+  }
+}
+
+.reviews input[type=range] {
+  display: block;
+
+  width: 599px;
+  height: 8px;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  border: 0.5px solid transparent;
+  background: $gradient-border;
+  background-origin: border-box;
+  box-shadow: inset 0px 0px 0px 100vw $color-background-additional;
+  border-radius: 5px;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  @include media-laptopsmall {
+    width: 390px;
+
+    margin-bottom: 50px;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.reviews input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 6px;
+  width: 115px;
+
+  margin-left: 1px;
+
+  border-radius: 5px;
+  background: $color-primary;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  @include media-laptopsmall {
+    width: 75px;
+  }
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 6px;
+  width: 115px;
+
+  margin-left: 2px;
+
+  background: $color-primary;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  -moz-appearance: none;
+
+  @include media-laptopsmall {
+    width: 75px;
+  }
+}
+
+.reviews__button {
+  border-radius: 5px;
+
+  @include media-tablet {
+    width: 240px;
+
+    margin: 0 auto;
+  }
+}

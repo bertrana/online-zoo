@@ -1,0 +1,33 @@
+.main-nav__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__item a {
+  display: block;
+
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:focus {
+  color: rgba(196, 196, 196, 0.5);
+}
+
+.main-nav__item a:active {
+  color: $color-primary;
+}
+
+.main-nav__item--current a {
+  color: $color-primary;
+}
+
+.main-nav__item--current a:hover,
+.main-nav__item--current a:focus {
+  color: $color-primary;
+}

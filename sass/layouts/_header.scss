@@ -1,0 +1,164 @@
+.page-header {
+  min-height: 80px;
+
+  color: #fff;
+  @include font-add($weight: 500, $height: 140%);
+  background-color: #000;
+
+  @include media-laptopsmall {
+    background-color: $color-footer;
+  }
+
+  @include media-tablet {
+    position: fixed;
+
+    width: 100%;
+    
+    min-height: 34px;
+
+    z-index: 2;
+  }
+}
+
+.page-header .container {
+  display: flex;
+
+  @include media-tablet {
+    min-height: 34px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  display: block;
+
+  width: 82px;
+  height: 52px;
+
+  margin-top: 14px;
+  margin-right: 32px;
+
+  @include media-laptopsmall {
+    margin-right: 40px;
+  }
+
+  @include media-tablet {
+    width: 47px;
+    height: 29px;
+
+    margin: 0;
+
+    &>img {
+        width: 47px;
+        height: 29px;
+
+        border: none;
+    }
+  }
+}
+
+.page-header__main-nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+
+  .main-nav__item a {
+    padding: 29px;
+  
+    @include media-laptopsmall {
+      padding: 29px 24px;
+    }
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.page-header__copyright {
+  margin-left: auto;
+  padding: 29px;
+  padding-right: 0;
+
+  color: #fff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-hover;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+  @include media-laptopsmall {
+    padding: 29px 24px;
+    padding-right: 0;
+  }
+}
+
+.page-header--burger-menu {
+  position: fixed;
+
+  background-color: #fff;
+
+  z-index: 4;
+
+  .container {
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+
+  .page-header__logo {
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 3px;
+
+    border: 1px solid $color-primary;
+    border-radius: 2px;
+  }
+
+  .page-header__main-nav {
+    display: block;
+
+    .main-nav__list {
+      flex-direction: column;
+      
+    }
+
+    *>a, a {
+      padding: 0;
+      padding-bottom: 15px;
+      color: #000;
+    }
+  }
+
+  .hamburger {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    &::before {
+      background-color: #000;
+      transform: translateY(3.5px) rotate(45deg);
+      transition: transform 0.5s ease-out;
+    }
+  
+    &::after {
+      background-color: #000;
+      transform: translateY(-3.5px) rotate(-45deg);
+      transition: transform 0.5s ease-out;
+    }
+
+    .hamburger__line {
+      display: none;
+    }
+  }
+}
+

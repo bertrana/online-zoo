@@ -1,0 +1,158 @@
+.watch-online {
+  min-height: 700px;
+
+  background-image: url("assets/images/main-page__watch-online.jpeg");
+  background-size: 1620px auto;
+  background-color: $color-disabled;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -220px;
+
+  @include media-laptopsmall {
+    min-height: 504px;
+    background-size: 1450px auto;
+  }
+
+  @include media-tablet {
+    // margin-top: 34px;
+    min-height: 340px;
+
+    background-size: 1000px auto;
+    background-position-y: -190px;
+  }
+
+  @include media-mobile {
+    min-height: 177px;
+    background-size: 640px auto;
+    background-position-y: -100px;
+  }
+}
+
+.watch-online__header {
+  width: 500px;
+
+  position: relative;
+  margin: 0;
+  margin-left: auto;
+  padding-top: 87px;
+  z-index: 1;
+
+  color: #fff;
+  @include font-add(106.5px, 700, 75%);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include media-laptopsmall {
+    width: 400px;
+    padding-top: 42.8px;
+    padding-right: 55px;
+
+    font-size: 85px;
+  }
+
+  @include media-tablet {
+    width: 255px;
+    padding-top: 48px;
+    padding-right: 0;
+
+    font-size: 54.3px;
+  }
+
+  @include media-mobile {
+    width: 128px;
+    padding-top: 39px;
+
+    font-size: 28px;
+  }
+}
+
+.watch-online__header strong {
+  color: $color-yellow;
+}
+
+.watch-online__header::before {
+  content: "";
+
+  width: 465px;
+  height: 465px;
+
+  position: absolute;
+  right: 108px;
+  top: 12px;
+  z-index: -1;
+
+  border-radius: 50%;
+  background: $gradient-primary;
+
+  @include media-laptopsmall {
+    width: 367px;
+    height: 367px;
+
+    top: -11px;
+    right: 147px;
+
+    overflow: hidden;
+  }
+
+  @include media-tablet {
+    width: 237px;
+    height: 237px;
+
+    top: 10px;
+    right: 55px;
+  }
+
+  @include media-mobile {
+    width: 119px;
+    height: 119px;
+
+    top: 22px;
+    right: 28px;
+  }
+}
+
+.watch-online__header::after {
+  content: "";
+
+  display: none;
+  width: 465px;
+  height: 12px;
+
+  position: absolute;
+  right: 108px;
+  top: -12px;
+
+  background: $color-footer;
+
+  @include media-laptopsmall {
+    display: block;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.watch-online .button {
+  margin-top: 60px;
+  margin-right: 100px;
+  margin-left: auto;
+
+  border-radius: 25px;
+
+  @include media-laptopsmall {
+    margin-top: 40px;
+    margin-right: 107px;
+  }
+
+  @include media-tablet {
+    margin: 0;
+    margin-top: -6px;
+  }
+
+  @include media-mobile {
+    position: relative;
+    bottom: -75px;
+    left: 0;
+  }
+}

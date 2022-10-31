@@ -1,0 +1,213 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  color: #fff;
+  @include font-add($weight: 500, $height: 140%);
+  background: $color-footer;
+
+  @include media-tablet {
+    padding: 12px 0;
+  }
+
+  @include media-mobile {
+    padding: 20px 0;
+  }
+}
+
+.page-footer .container {
+  display: grid;
+
+  grid-template-columns: 1fr 425px 1fr;
+  grid-template-rows: 121px 101px 130px;
+  grid-template-areas: 
+  "logo sub-form sub-form"
+  "donate-btn . ."
+  "social nav copyright";
+
+  @include media-laptopsmall {
+    grid-template-columns: 1fr 400px 1fr;
+  }
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 85px 90px 83px;
+    grid-template-areas: 
+    "logo social"
+    "donate-btn social"
+    "nav copyright";
+  }
+
+  @include media-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.page-footer .logo {
+  width: 82px;
+  height: 52px;
+
+  grid-area: logo;
+
+  @include media-mobile {
+    order: 1;
+
+    width: 128px;
+    height: 23px;
+
+    margin: 0 auto;
+
+    &--mobile {
+      display: block;
+
+      border: none;
+    }
+
+    &--laptop {
+      display: none;
+    }
+  }
+}
+
+.page-footer__form {
+  max-width: 370px;
+
+  grid-area: sub-form;
+  justify-self: end;
+
+  @include media-laptopsmall {
+    margin-right: 30px;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.page-footer__form-title {
+  @include font-add($size: 24px);
+}
+
+.page-footer__form input[type="email"] {
+  width: 228px;
+  height: 42px;
+
+  margin-top: 14px;
+  margin-right: 10px;
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  color: #BDBDBD;
+  @include font-add($height: 140%);
+
+  background: $color-footer;
+  border: 0.7px solid $gradient-primary;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $color-active;
+  }
+}
+
+.page-footer__form .submit-btn {
+  width: 125px;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+
+  box-sizing: border-box;
+  
+  color: $color-text;
+  @include font-add($height: 140%);
+
+  background: #F1F3F2;
+  border: 1px solid $color-text;
+  border-radius: 5px;
+
+  &:focus,
+  &:hover {
+    color: #F1F3F2;
+    border-color: #F1F3F2;
+    background: $color-text;
+  }
+}
+
+.page-footer__donate-button {
+  grid-area: donate-btn;
+  align-self: start;
+
+  border-radius: 5px;
+
+  @include media-mobile {
+    order: 3;
+  }
+}
+
+.page-footer .social {
+  @include media-mobile {
+    order: 2;
+  }
+}
+
+.page-footer__main-nav {
+  grid-area: nav;
+  align-self: end;
+
+  .main-nav__item a {
+    padding: 29px;
+    padding-bottom: 0;
+  
+    @include font-add($height: 140%);
+    white-space: nowrap ;
+
+    @include media-laptopsmall {
+      padding: 0;
+      padding-right: 48px;
+    }
+
+    @include media-tablet {
+      padding-right: 37px;
+    }
+
+    @include media-mobile {
+      padding-right: 30px;
+    }
+  }
+
+  @include media-tablet {
+    .main-nav__item:last-child a {
+      padding: 0;
+    }
+  }
+
+  @include media-mobile {
+    order: 5;
+
+    margin: 0 12px;
+  }
+}
+
+.page-footer__copyright {
+  grid-area: copyright;
+  justify-self: end;
+  align-self: end;
+
+  margin: 0;
+
+  @include font-add($weight: 100, $height: 130%);
+
+  br {
+    content: "";
+    display: block;
+    margin: 10px;
+  }
+
+  @include media-mobile {
+    order: 4;
+  }
+}

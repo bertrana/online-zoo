@@ -1,0 +1,124 @@
+.about {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 176px;
+
+  background-image: url("./assets/images/about__decor--right.png");
+  background-position: right top 13px;
+  background-repeat: no-repeat;
+
+  @include media-laptopsmall {
+    padding-top: 100px;
+    padding-bottom: 142px;
+
+    background: none;
+  }
+
+  @include media-tablet {
+    padding-top: 60px;
+    padding-bottom: 80px;
+
+    background-image: url("./assets/images/about__decor--right.png");
+    background-size: auto 476px;
+    background-position: right -30px top;
+    background-repeat: no-repeat;
+  }
+
+  @include media-mobile {
+    padding-top: 104px;
+    padding-bottom: 40px;
+
+    background-size: auto 217px;
+    background-position: right -40px top 38px;
+  }
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__img {
+  width: 609px;
+  height: 403px;
+
+  margin-right: 90px;
+
+  @include media-laptopsmall {
+    width: 455px;
+    height: 408px;
+
+    margin-top: 9px;
+    margin-right: 32px;
+
+    object-fit: cover;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.about__text {
+  max-width: 465px;
+
+  @include media-laptopsmall {
+    max-width: 454px;
+  }
+
+  @include media-tablet {
+    max-width: 495px;
+  }
+
+  @include media-mobile {
+    max-width: 300px;
+  }
+}
+
+.about__text * {
+  margin: 0;
+}
+
+.about__title {
+  margin-bottom: 20px;
+
+  @include font-add($size: 48px);
+
+  @include media-mobile {
+    margin-bottom: 10px;
+  
+    @include font-add($size: 24px);
+  }
+}
+
+.about__preview {
+  margin-bottom: 55px;
+
+  @include font-add($height: 130%);
+
+  @include media-tablet {
+    margin-bottom: 30px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 20px;
+  }
+}
+
+.about__header {
+  margin-bottom: 34px;
+
+  @include font-add($size: 24px);
+
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 7px;
+  }
+}
+
+.about__description {
+  @include font-add($height: 140%)
+}

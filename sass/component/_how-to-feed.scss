@@ -1,0 +1,153 @@
+.how-to-feed {
+  margin: 0 auto;
+  margin-bottom: 60px;
+
+  @include media-laptopsmall {
+    margin-bottom: 71px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 40px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.how-to-feed h3 {
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include font-add($size: 36px, $height: 130%);
+  text-align: center;
+
+  @include media-tablet {
+    margin-bottom: 20px;
+  }
+
+  @include media-mobile {
+    @include font-add($size: 24px);
+  }
+}
+
+.how-to-feed__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  position: relative;
+
+  max-width: 764px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+
+  @include media-tablet {
+    padding-right: 8px;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+    gap: 20px;
+
+    &>li {
+      margin: 0 auto;
+    }
+  }
+}
+
+.how-to-feed__list::before,
+.how-to-feed__list::after {
+  content: "";
+
+  position: absolute;
+  top: 59px;
+
+  width: 69px;
+  height: 35px;
+
+  background-color: transparent;
+  background-image: url("assets/icons/how-to-feed__arrow.png");
+
+  @include media-tablet {
+    top: -67px;
+
+    width: 63px;
+    height: 90px;
+
+    transform: rotate(-90deg);
+
+    background-image: url("assets/icons/tablet_how-to-feed__arrow.png");
+    background-repeat: no-repeat;
+  }
+
+  @include media-mobile {
+    transform: none;
+  }
+}
+
+.how-to-feed__list::before {
+  left: 194px;
+
+  @include media-tablet {
+    left: 150px;
+  }
+
+  @include media-mobile {
+    left: 240px;
+    top: 160px;
+  }
+}
+
+.how-to-feed__list::after {
+  right: 201px;
+
+  @include media-tablet {
+    right: 180px;
+  }
+
+  @include media-mobile {
+    right: 0px;
+    top: 410px;
+  }
+}
+
+.how-to-feed__step {
+  width: 168px;
+
+  margin: 0;
+
+  @include media-mobile { 
+    margin: 0 auto;
+  }
+}
+
+.how-to-feed__step img {
+  width: 168px;
+  height: 168px;
+
+  margin-bottom: 28px;
+
+  box-sizing: border-box;
+  object-fit: none;
+
+  border: 1px solid transparent;
+  background: $gradient-primary;
+  box-shadow: inset 0px 0px 0px 100vw #fff;
+  border-radius: 5px;
+
+  @include media-mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.how-to-feed__step figcaption {
+  @include font-add($height: 140%);
+
+  @include media-mobile {
+    min-height: 48px;
+  }
+}

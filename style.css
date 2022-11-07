@@ -1567,7 +1567,7 @@ input[type=range]::-moz-range-thumb {
 
 .watch-online {
   min-height: 700px;
-  background-image: url("assets/images/main-page__watch-online.jpeg");
+  background-image: url("assets/images/main-page__watch-online.png");
   background-size: 1620px auto;
   background-color: #767474;
   background-repeat: no-repeat;
@@ -1719,6 +1719,14 @@ input[type=range]::-moz-range-thumb {
     bottom: -75px;
     left: 0;
   }
+}
+
+.donate-page {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+}
+.donate-page .header-image {
+  height: 390px;
+  background-image: url("assets/images/donate-page__watch-online.png");
 }
 
 .carousel {

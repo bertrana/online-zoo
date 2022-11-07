@@ -1,22 +1,22 @@
 @import "abstract/constant";
 @import "abstract/mixins";
 
-//Base
+// Base
 @import "base/base";
 @import "base/button";
 @import "base/hamburger";
 @import "base/overlay";
 @import "base/visually-hidden";
 
-//Component logo for footer and header
+// Component logo for footer and header
 @import "component/logo";
 
-//Layouts
+// Layouts
 @import "layouts/container";
 @import "layouts/footer";
 @import "layouts/header";
 
-//Components
+// Components
 @import "component/about";
 @import "component/feed-friend";
 @import "component/how-to-feed";
@@ -28,6 +28,8 @@
 @import "component/social";
 @import "component/watch-online";
 
+// Pages
+@import "pages/donate";
 
-//Base carousel overwrite pets styles
+// Base carousel overwrite pets styles
 @import "base/carousel";

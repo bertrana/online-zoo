@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Online Zoo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Zoo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="visually-hidden">PetStory Online</h1>
+      <div class="container">
+        <a class="logo page-header__logo" href="index.html">
+          <img src="assets/icons/logo.png" width="82" height="52" alt="Logo">
+        </a>
+        <nav class="page-header__main-nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html">About</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Map</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Zoos</a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a>Donate</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+          <a class="page-header__copyright" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by &copy;</a>
+        </nav>
+        <span class="hamburger">
+          <span class="hamburger__line"></span>
+        </span>
+      </div>
+    </header>
+
+    <main class="donate-page">
+      <div class="header-image"></div>
+
+      <div class="donate-page__wrapper">
+        <section class="donate-page__notice">
+          
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container">
+        <a class="logo" href="#">
+          <img class="logo--laptop" src="assets/icons/logo.png" width="82" height="52" alt="Logo">
+          <img class="logo--mobile" src="assets/icons/mobile_logo.png" width="128" height="23" alt="Logo">
+        </a>
+        <form class="page-footer__form">
+          <b class="page-footer__form-title">Subscribe to our news</b>
+          <input type="email" name="email-submit" id="email-submit" placeholder="Enter your email" required>
+          <label class="visually-hidden" for="email-submit">Enter your email</label>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+        <a class="button page-footer__donate-button" href="donate.html">Donate for volunteers</a>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="" class="social__link social__link--fb">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--tw">Twitter</a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--inst">Instagram</a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link social__link--yt">YouTube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__main-nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a>About</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Map</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Zoos</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <p class="page-footer__copyright">
+          Designed by Alisa Samborskaya
+          <br>&copy;RSSchool & &copy;Yem Digital 2021
+        </p>
+      </div>
+    </footer>
+
+    <script src="scripts/burger-menu.js"></script>
+</html>

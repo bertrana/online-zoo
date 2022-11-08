@@ -1,5 +1,7 @@
 .donate-page {
   background: $gradient-additional;
+
+  @include font-add($height: 140%);
   
   .header-image {
     height: 390px;
@@ -30,7 +32,7 @@
 
   p {
     margin: 0;
-    @include font-add($height: 140%, $weight: 500);
+    @include font-add($weight: 500);
   }
 }
 
@@ -112,7 +114,6 @@
 
     figcaption {
       padding-top: 10px;
-      @include font-add($height: 140%)
     }
 
     &--panda span {
@@ -124,5 +125,81 @@
       background-image: url("assets/images/widget-panda.png");
       background-repeat: no-repeat;
     }
+  }
+
+  .feed-friend__share {
+    margin: 0;
+
+    text-align: center;
+  }
+}
+
+.donate-page__form {
+
+  input, label {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .amount__slider {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-bottom: 50px;
+    padding: 8px 25px;
+
+    background-color: #404950;
+  }
+
+  input[type="number"] {
+    display: block;
+
+    position: relative;
+
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 16px 9px;
+    padding-right: 44px;
+
+    width: 268px;
+
+    color: #929699;
+    @include font-add($height: 140%);
+    background-color: $color-background;
+    border: 1px solid #929699;
+    border-radius: 2px;
+    
+    &::before {
+      content: "$";
+      
+      position: absolute;
+      top: 17px;
+      right: 17px;
+
+      width: 10px;
+      height: 20px;
+
+      color: #929699;
+      background-color: red;
+    }
+  }
+
+  fieldset {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    padding: 0;
+
+    text-align: center;
+    border: none;
+  }
+
+  .button {
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+    border-radius: 25px;
   }
 }

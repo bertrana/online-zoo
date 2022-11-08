@@ -1723,6 +1723,9 @@ input[type=range]::-moz-range-thumb {
 
 .donate-page {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
 }
 .donate-page .header-image {
   height: 390px;
@@ -1749,7 +1752,7 @@ input[type=range]::-moz-range-thumb {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
-  line-height: 140%;
+  line-height: 120%;
 }
 
 .donation-info {
@@ -1817,9 +1820,6 @@ input[type=range]::-moz-range-thumb {
 }
 .donate-page__feed-friend .feed-friend__graphic figcaption {
   padding-top: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 140%;
 }
 .donate-page__feed-friend .feed-friend__graphic--panda span {
   display: block;
@@ -1827,6 +1827,61 @@ input[type=range]::-moz-range-thumb {
   width: 284px;
   background-image: url("assets/images/widget-panda.png");
   background-repeat: no-repeat;
+}
+.donate-page__feed-friend .feed-friend__share {
+  margin: 0;
+  text-align: center;
+}
+
+.donate-page__form input, .donate-page__form label {
+  cursor: pointer;
+  user-select: none;
+}
+.donate-page__form .amount__slider {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 8px 25px;
+  background-color: #404950;
+}
+.donate-page__form input[type=number] {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 16px 9px;
+  padding-right: 44px;
+  width: 268px;
+  color: #929699;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  background-color: rgba(253, 253, 255, 0.52);
+  border: 1px solid #929699;
+  border-radius: 2px;
+}
+.donate-page__form input[type=number]::before {
+  content: "$";
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 10px;
+  height: 20px;
+  color: #929699;
+  background-color: red;
+}
+.donate-page__form fieldset {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+.donate-page__form .button {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 25px;
 }
 
 .carousel {

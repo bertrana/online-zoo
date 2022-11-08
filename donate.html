@@ -65,19 +65,41 @@
               </figure>              
               <span></span>
             </div>
-            <form action="" method="post">
+            
+            <form class="donate-page__form feed-friend__form" action="" method="post">
+              
+              <div class="amount__slider">
+                <input type="radio" name="amount" id="amount-1" value="5000">
+                <label for="amount-1">$5000</label>
+                <input type="radio" name="amount" id="amount-2" value="2000">
+                <label for="amount-2">$2000</label>
+                <input type="radio" name="amount" id="amount-3" value="1000" checked>
+                <label for="amount-3">$1000</label>
+                <input type="radio" name="amount" id="amount-4" value="500">
+                <label for="amount-4">$500</label>
+                <input type="radio" name="amount" id="amount-5" value="250">
+                <label for="amount-5">$250</label>
+                <input type="radio" name="amount" id="amount-6" value="100">
+                <label for="amount-6">$100</label>
+                <input type="radio" name="amount" id="amount-7" value="50">
+                <label for="amount-7">$50</label>
+                <input type="radio" name="amount" id="amount-8" value="25">
+                <label for="amount-8">$25</label>
+              </div>
+
+              <label class="visually-hidden" for="custom-amount">Custom amount</label>
+              <input type="number" name="custom-amount" id="custom-amount" placeholder="Another amount">
+              
               <fieldset>
-                <legend>Amount</legend>
-                <input type="range" name="" id="">
+                <input type="radio" name="pay-period" id="monthly">
+                <label for="monthly">Monthly</label>
+                <input type="radio" name="pay-period" id="once" checked>
+                <label for="once">Once</label>
               </fieldset>
-              <input type="number" name="" id="">
-              <fieldset>
-                <input type="radio" name="" id="">
-                <input type="radio" name="" id="">
-              </fieldset>
+
               <button class="button" type="submit">Feed a friend now</button>
             </form>
-            <p class="share">Share with your friends on social networks</p>
+            <p class="feed-friend__share">Share with your friends on social networks</p>
           </div>
         </section>
       </div>

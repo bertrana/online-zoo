@@ -1,10 +1,128 @@
 .donate-page {
-
-  background: $gradient-primary;
+  background: $gradient-additional;
+  
   .header-image {
     height: 390px;
 
     background-image: url("assets/images/donate-page__watch-online.png");
     // background-size: auto 390px;
+  }
+
+}
+
+.donate-page__container {
+  max-width: 1160px;
+
+  margin: 0 auto;
+}
+
+.donate-page__notice {
+  margin-bottom: 40px;
+
+  color: #fff;
+
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+    @include font-add($size: 36px, $height: 130%);
+  }
+
+  p {
+    margin: 0;
+    @include font-add($height: 140%, $weight: 500);
+  }
+}
+
+.donation-info {
+  margin: 0;
+  margin-bottom: 60px;
+
+  color: $color-primary;
+  @include font-add($size: 36px, $height: 130%);
+}
+
+.donate-page__feed-friend {
+  padding: 0;
+  padding-bottom: 180px;
+
+  background: none;
+
+  .feed-friend__container {
+    padding-left: 92px;
+    padding-right: 92px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .feed-friend__preview {
+    margin-bottom: 60px;
+  }
+
+  .feed-friend__graphic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 246px;
+    max-width: 532px;
+
+    margin: 0 auto;
+    margin-bottom: 48px;
+
+    figure {
+      position: relative;
+
+      margin: 0;
+      padding-top: 55px;
+    }
+
+    figure::after,
+    figure::before {
+      content: "";
+
+      position: absolute;
+      bottom: calc(50% - 14px);
+      right: -20%;
+
+      width: 20px;
+      height: 2px;
+
+      background-color: $color-text;
+      border-radius: 1px;
+    }
+
+    figure::before {
+      transform: rotate(45deg);
+    }
+
+    figure::after {
+      transform: rotate(-45deg);
+    }
+    
+    p {
+      margin: 0;
+      
+      color: #000;
+      text-align: center;
+      @include font-add($size: 72px, $height: 80%, $weight: 500);
+    }
+
+    figcaption {
+      padding-top: 10px;
+      @include font-add($height: 140%)
+    }
+
+    &--panda span {
+      display: block;
+      height: 246px;
+      width: 284px;
+
+      // background-color: #fff;
+      background-image: url("assets/images/widget-panda.png");
+      background-repeat: no-repeat;
+    }
   }
 }

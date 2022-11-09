@@ -4,7 +4,7 @@
   @include font-add($height: 140%);
   
   .header-image {
-    height: 390px;
+    height: 386px;
 
     background-image: url("assets/images/donate-page__watch-online.png");
     // background-size: auto 390px;
@@ -32,7 +32,7 @@
 
   p {
     margin: 0;
-    @include font-add($weight: 500);
+    @include font-add($height: 140%, $weight: 500);
   }
 }
 
@@ -60,7 +60,7 @@
   }
 
   .feed-friend__preview {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
   }
 
   .feed-friend__graphic {
@@ -136,58 +136,22 @@
 
 .donate-page__form {
 
-  input, label {
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .amount__slider {
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-
-    margin: 0;
-    margin-bottom: 98px;
-    padding: 8px 25px;
-
-    list-style: none;
-    background-color: #404950;
-  }
-
-  .amount__item {
-    position: relative;
-
-    label {
-      position: absolute;
-      top: 40px;
-      left: -15px;
-
-      @include font-add($size: 26px, $height: 140%, $weight: 500);
-    }
-
-    input:checked {
-      & + label {
-        color: $color-primary;
-      }
-    }
-  }
-
   input[type="number"] {
     display: block;
+    box-sizing: border-box;
 
     position: relative;
 
     margin: 0 auto;
     margin-bottom: 25px;
-    padding: 16px 9px;
+    padding: 15px 9px;
     padding-right: 44px;
 
     width: 268px;
 
     color: #929699;
     @include font-add($height: 140%);
-    background-color: $color-background;
+    background-color: transparent;
     border: 1px solid #929699;
     border-radius: 2px;
     
@@ -206,12 +170,9 @@
     }
   }
 
-  fieldset {
-    margin: 0 auto;
+  .period {
     margin-bottom: 30px;
-
-    padding: 0;
-
+    
     text-align: center;
     border: none;
 

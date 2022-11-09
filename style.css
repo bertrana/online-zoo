@@ -6,6 +6,17 @@ body {
   background-color: #fff;
 }
 
+input, label {
+  cursor: pointer;
+  user-select: none;
+}
+
+fieldset {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+}
+
 .button {
   display: block;
   width: 298px;
@@ -607,6 +618,87 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+}
+
+.amount legend {
+  margin-bottom: 17px;
+}
+
+.amount__slider {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 98px;
+  padding: 2px 25px;
+  padding-right: 35px;
+  list-style: none;
+  background-color: #404950;
+}
+.amount__slider::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: 2px;
+  background: #72828E;
+}
+
+.amount__item {
+  position: relative;
+}
+.amount__item label {
+  position: absolute;
+  top: 37px;
+  left: -23px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 140%;
+}
+.amount__item::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #FFEE2E;
+  border-radius: 50%;
+}
+.amount__item input[type=radio] {
+  position: relative;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+.amount__item input[type=radio]::before, .amount__item input[type=radio]::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: -25px;
+  left: -15px;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+}
+.amount__item input[type=radio]:checked + label {
+  color: #FE9013;
+}
+.amount__item input[type=radio]:checked::before {
+  top: -17px;
+  left: -7px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #FE9013;
+}
+.amount__item input[type=radio]:checked::after {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FE9013;
 }
 
 .feed-friend {
@@ -1728,7 +1820,7 @@ input[type=range]::-moz-range-thumb {
   line-height: 140%;
 }
 .donate-page .header-image {
-  height: 390px;
+  height: 386px;
   background-image: url("assets/images/donate-page__watch-online.png");
 }
 
@@ -1752,7 +1844,7 @@ input[type=range]::-moz-range-thumb {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
-  line-height: 120%;
+  line-height: 140%;
 }
 
 .donation-info {
@@ -1777,7 +1869,7 @@ input[type=range]::-moz-range-thumb {
   margin-bottom: 20px;
 }
 .donate-page__feed-friend .feed-friend__preview {
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 .donate-page__feed-friend .feed-friend__graphic {
   display: flex;
@@ -1833,47 +1925,20 @@ input[type=range]::-moz-range-thumb {
   text-align: center;
 }
 
-.donate-page__form input, .donate-page__form label {
-  cursor: pointer;
-  user-select: none;
-}
-.donate-page__form .amount__slider {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 98px;
-  padding: 8px 25px;
-  list-style: none;
-  background-color: #404950;
-}
-.donate-page__form .amount__item {
-  position: relative;
-}
-.donate-page__form .amount__item label {
-  position: absolute;
-  top: 40px;
-  left: -15px;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 140%;
-}
-.donate-page__form .amount__item input:checked + label {
-  color: #FE9013;
-}
 .donate-page__form input[type=number] {
   display: block;
+  box-sizing: border-box;
   position: relative;
   margin: 0 auto;
   margin-bottom: 25px;
-  padding: 16px 9px;
+  padding: 15px 9px;
   padding-right: 44px;
   width: 268px;
   color: #929699;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
-  background-color: rgba(253, 253, 255, 0.52);
+  background-color: transparent;
   border: 1px solid #929699;
   border-radius: 2px;
 }
@@ -1887,14 +1952,12 @@ input[type=range]::-moz-range-thumb {
   color: #929699;
   background-color: red;
 }
-.donate-page__form fieldset {
-  margin: 0 auto;
+.donate-page__form .period {
   margin-bottom: 30px;
-  padding: 0;
   text-align: center;
   border: none;
 }
-.donate-page__form fieldset label[for=monthly] {
+.donate-page__form .period label[for=monthly] {
   padding-right: 50px;
 }
 .donate-page__form .button {

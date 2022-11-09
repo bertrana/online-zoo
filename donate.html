@@ -68,45 +68,48 @@
             
             <form class="donate-page__form feed-friend__form" action="" method="post">
               
-              <ul class="amount__slider">
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-1" value="5000">
-                  <label for="amount-1">$5000</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-2" value="2000">
-                  <label for="amount-2">$2000</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-3" value="1000" checked>
-                  <label for="amount-3">$1000</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-4" value="500">
-                  <label for="amount-4">$500</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-5" value="250">
-                  <label for="amount-5">$250</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-6" value="100">
-                  <label for="amount-6">$100</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-7" value="50">
-                  <label for="amount-7">$50</label>
-                </li>
-                <li class="amount__item">
-                  <input type="radio" name="amount" id="amount-8" value="25">
-                  <label for="amount-8">$25</label>
-                </li>
-              </ul>
+              <fieldset class="amount">
+                <legend>Amount</legend>
+                <ul class="amount__slider">
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-1" value="5000">
+                    <label for="amount-1">$5000</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-2" value="2000">
+                    <label for="amount-2">$2000</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-3" value="1000" checked>
+                    <label for="amount-3">$1000</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-4" value="500">
+                    <label for="amount-4">$500</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-5" value="250">
+                    <label for="amount-5">$250</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-6" value="100">
+                    <label for="amount-6">$100</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-7" value="50">
+                    <label for="amount-7">$50</label>
+                  </li>
+                  <li class="amount__item">
+                    <input type="radio" name="amount" id="amount-8" value="25">
+                    <label for="amount-8">$25</label>
+                  </li>
+                </ul>
+              </fieldset>
 
               <label class="visually-hidden" for="custom-amount">Custom amount</label>
               <input type="number" name="custom-amount" id="custom-amount" placeholder="Another amount">
               
-              <fieldset>
+              <fieldset class="period">
                 <input type="radio" name="pay-period" id="monthly">
                 <label for="monthly">Monthly</label>
                 <input type="radio" name="pay-period" id="once" checked>

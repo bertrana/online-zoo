@@ -670,9 +670,9 @@ fieldset {
 }
 .amount__item input[type=radio] {
   position: relative;
-  margin: 0;
   height: 0;
   width: 0;
+  margin: 0;
 }
 .amount__item input[type=radio]::before, .amount__item input[type=radio]::after {
   content: "";
@@ -1959,6 +1959,25 @@ input[type=range]::-moz-range-thumb {
 }
 .donate-page__form .period label[for=monthly] {
   padding-right: 50px;
+}
+.donate-page__form .period input[type=radio] {
+  position: relative;
+  height: 0;
+  width: 0;
+}
+.donate-page__form .period input[type=radio]::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: -16px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FE9013;
+  border-radius: 50%;
+}
+.donate-page__form .period input[type=radio]:checked::before {
+  background: #FE9013;
 }
 .donate-page__form .button {
   margin: 0 auto;

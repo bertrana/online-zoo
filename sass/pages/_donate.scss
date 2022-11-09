@@ -147,10 +147,30 @@
 
     width: 100%;
 
-    margin-bottom: 50px;
+    margin: 0;
+    margin-bottom: 98px;
     padding: 8px 25px;
 
+    list-style: none;
     background-color: #404950;
+  }
+
+  .amount__item {
+    position: relative;
+
+    label {
+      position: absolute;
+      top: 40px;
+      left: -15px;
+
+      @include font-add($size: 26px, $height: 140%, $weight: 500);
+    }
+
+    input:checked {
+      & + label {
+        color: $color-primary;
+      }
+    }
   }
 
   input[type="number"] {
@@ -194,6 +214,10 @@
 
     text-align: center;
     border: none;
+
+    label[for="monthly"] {
+      padding-right: 50px;
+    }
   }
 
   .button {

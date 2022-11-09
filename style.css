@@ -1841,9 +1841,25 @@ input[type=range]::-moz-range-thumb {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 50px;
+  margin: 0;
+  margin-bottom: 98px;
   padding: 8px 25px;
+  list-style: none;
   background-color: #404950;
+}
+.donate-page__form .amount__item {
+  position: relative;
+}
+.donate-page__form .amount__item label {
+  position: absolute;
+  top: 40px;
+  left: -15px;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 140%;
+}
+.donate-page__form .amount__item input:checked + label {
+  color: #FE9013;
 }
 .donate-page__form input[type=number] {
   display: block;
@@ -1877,6 +1893,9 @@ input[type=range]::-moz-range-thumb {
   padding: 0;
   text-align: center;
   border: none;
+}
+.donate-page__form fieldset label[for=monthly] {
+  padding-right: 50px;
 }
 .donate-page__form .button {
   margin: 0 auto;

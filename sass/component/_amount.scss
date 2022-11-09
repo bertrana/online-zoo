@@ -109,4 +109,10 @@
       border: 2px solid $color-primary;
     }
   }
+
+  &:hover {
+    &::before {
+      background: $color-active;
+    }
+  }
 }

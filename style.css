@@ -700,6 +700,9 @@ fieldset {
   height: 40px;
   border: 2px solid #FE9013;
 }
+.amount__item:hover::before {
+  background: #4B9200;
+}
 
 .feed-friend {
   padding-top: 69px;

@@ -145,29 +145,20 @@
     margin: 0 auto;
     margin-bottom: 25px;
     padding: 15px 9px;
-    padding-right: 44px;
+    padding-right: 35px;
 
     width: 268px;
 
     color: #929699;
     @include font-add($height: 140%);
+    
+    background-image: url("assets/icons/dollar-sign.png");
     background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: right 5% top 50%;
+
     border: 1px solid #929699;
     border-radius: 2px;
-    
-    &::before {
-      content: "$";
-      
-      position: absolute;
-      top: 17px;
-      right: 17px;
-
-      width: 10px;
-      height: 20px;
-
-      color: #929699;
-      background-color: red;
-    }
   }
 
   .period {
@@ -203,7 +194,8 @@
       }
 
       &:checked::before {
-        background: $color-primary;
+        background: $color-active;
+        border: none;
       }
     }
   }

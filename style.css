@@ -1932,25 +1932,18 @@ input[type=range]::-moz-range-thumb {
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 15px 9px;
-  padding-right: 44px;
+  padding-right: 35px;
   width: 268px;
   color: #929699;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+  background-image: url("assets/icons/dollar-sign.png");
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: right 5% top 50%;
   border: 1px solid #929699;
   border-radius: 2px;
-}
-.donate-page__form input[type=number]::before {
-  content: "$";
-  position: absolute;
-  top: 17px;
-  right: 17px;
-  width: 10px;
-  height: 20px;
-  color: #929699;
-  background-color: red;
 }
 .donate-page__form .period {
   margin-bottom: 30px;
@@ -1977,7 +1970,8 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50%;
 }
 .donate-page__form .period input[type=radio]:checked::before {
-  background: #FE9013;
+  background: #4B9200;
+  border: none;
 }
 .donate-page__form .button {
   margin: 0 auto;
